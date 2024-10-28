@@ -19,11 +19,15 @@ body {
 }
 
 .logo_area {
-    background-color: #61659f;
+    background-color: #4e5076;
     color: #fff;
     border-radius: 50%;
-    padding: 20px;
 }
+.logo_area img{
+    width: 8vw;
+    height: 8vw;
+}
+
 
 .menu__list {
     display: flex;
@@ -45,14 +49,13 @@ body {
     background-color: #ce5f5f;
     color: #fff;
     border: 1px solid #4e5076;
-    transition: .5s ease-in-out;
+    transition: .5s ease;
 }
 
 #club:hover {
-    background-color: #ffcdcd;
-    border: 1px solid #ffcdcd;
+    background-color: #ffa1a1;
+    border: 1px solid #ffa1a1;
     color: #61659f;
-    transition: .5s ease-in-out;
-
+    transition: .5s ease;
 }
 
