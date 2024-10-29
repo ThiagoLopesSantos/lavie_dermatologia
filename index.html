@@ -4,30 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Vie - Dermatologia</title>
-    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo_area">
-                <img src="images/logo.png" alt="Lavie-Logo">
-        </div>
-
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__list__item ">
-                    <a href="#">Conheça o LaVie+</a>
+        <nav class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/images/logo2.png" alt="La Vie Logo">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a class="link--style" href="#">La Vie Dermatologia</a>
                 </li>
-                <li class="menu__list__item">
-                    <a href="#">Sobre a La Vie</a>
+                <li class="header__links__item">
+                    <a class="link--style" href="#">Dúvidas frequentes</a>
                 </li>
-                <li class="menu__list__item">
-                    <a href="#">Dúvidas Frequêntes</a>
-                </li> 
-                <li class="menu__list__item ">
-                    <a href="#" id="club">Assine LaVie+</a>
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary ">Marcar Consulta</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary">Assinar LaVie.Club</a>
+                </li>
+                <li class="header__links__item">
+                    <a class="link--style" href="#">Contato</a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__content__brand">
+                <img src="./dist/images/logo2.png" alt="La Vie Logo">
+            </h1>
+            <h3 class="title--small">
+                Clínica médica especializada no cuidado à saúde da sua pele.
+            </h3>
+        </div>
+        <img class="woman-img" src="./dist/images/mulher.png" alt="mulher">
+    </section>
+
+    <section class="club">
+        <div class="club__content">
+            <h2 class="club__content__title title--big">Vem fazer parte do La Vie Club!</h2>
+            <div class="club__content__link">
+                <a href="#">
+                    <img src="./dist/images/lavieclub+.png" alt="lavieclub">
+                </a>
+            </div>
+            <span class="title">Assine já!</span>
+
+        </div>
+    </section>
 </body>
 </html>
