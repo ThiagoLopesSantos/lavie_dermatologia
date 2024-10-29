@@ -1,5 +1,7 @@
-
-
+@use 'header';
+@use 'hero';
+@use 'variaveis';
+@use 'club';
 
 * {
     padding: 0;
@@ -9,14 +11,83 @@
     text-decoration: none;
 }
 
-
-
-$bgColor: #4e5076;
-
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$corDeFundo;
 }
 
+// PADRONIZANDO OS TEXTOS
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corDeTextoPrincipal;
+}
+.text--big {
+    @include text(18px);
+}
+.text {
+    @include text;
+}
+.text--small {
+    @include text(12px);
+}
+
+// PADRONIZANDO OS TITULOS
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corDeTextoSecundario;
+}
+.title--big {
+    @include title(44px);
+}
+.title {
+    @include title;
+}
+.title--small {
+    @include title(28px);
+}
+
+// PADRONIZANDO OS LINKS
+.link-text {
+    @include text(18px);
+    color: variaveis.$corDeTextoSecundario;
+    text-decoration: underline;
+}
+
+// BOTÕES
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corDeFundo;
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
+    }
+
+    &--secondary {
+        background-color: transparent;
+        border-color: variaveis.$corDeFundoBotaoSecundario;
+        transition: 1s ease;
+
+        &:hover {
+            background-color: lighten(variaveis.$corDeFundo, 9%);
+            color: variaveis.$corDeTextoPrincipal;
+        }
+    }
+}
+
+/*
 .header {
     display: flex;
     justify-content: space-evenly;
@@ -29,7 +100,6 @@ body {
 .logo_area {
     background-color: #4e5076;
     color: #fff;
-    border-radius: 50%;
 }
 .logo_area img{
     width: 8vw;
@@ -53,17 +123,19 @@ body {
     color: #8a8db1;
 }
 
-#club {
+#club img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     background-color: #ce5f5f;
     color: #fff;
     border: 1px solid #4e5076;
-    transition: .5s ease;
+    transition: .9s ease;
 }
-
-#club:hover {
-    background-color: #ffa1a1;
+#club img:hover {
+    background-color: #4e5076;
     border: 1px solid #ffa1a1;
     color: #61659f;
-    transition: .5s ease;
+    transition: .9s ease;
 }
-
+*/
